@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisProjektas\\BaigiamasisProjektas\\BaigiamasisProjektas.csproj": {}
+    "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisProjektas\\BaigiamasisProjektas\\BaigiamasisProjektas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisProjektas\\BaigiamasisProjektas\\BaigiamasisProjektas.csproj": {
+    "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisProjektas\\BaigiamasisProjektas\\BaigiamasisProjektas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisProjektas\\BaigiamasisProjektas\\BaigiamasisProjektas.csproj",
+        "projectUniqueName": "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisProjektas\\BaigiamasisProjektas\\BaigiamasisProjektas.csproj",
         "projectName": "BaigiamasisProjektas",
-        "projectPath": "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisProjektas\\BaigiamasisProjektas\\BaigiamasisProjektas.csproj",
+        "projectPath": "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisProjektas\\BaigiamasisProjektas\\BaigiamasisProjektas.csproj",
         "packagesPath": "C:\\Users\\Julita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisProjektas\\BaigiamasisProjektas\\obj\\",
+        "outputPath": "C:\\Users\\Julita\\Desktop\\VCS Automatinio testavimo mokymai\\Baigiamasis\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisGithub\\BaigiamasisProjektas\\BaigiamasisProjektas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Julita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,18 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[3.15.1, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[3.141.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[80.0.3987.10600, )"
             },
             "nunit": {
               "target": "Package",
