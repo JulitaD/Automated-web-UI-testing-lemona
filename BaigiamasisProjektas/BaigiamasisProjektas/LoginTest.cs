@@ -10,7 +10,7 @@ namespace BaigiamasisProjektas
         [Test]
         public void TestLogin()
         {
-            loginPage
+            homePage
                 .EnterUsername(User.DeafaultUser.Username)
                 .EnterPassword(User.DeafaultUser.Password)
                 .ClickLogin()

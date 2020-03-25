@@ -10,13 +10,13 @@ namespace BaigiamasisProjektas
         [Test]
         public void TestShoppingCart()
         {
-            //loginPage
-            //    .ClickAddToCart()
-            //    .AssertBuyButtonIsPresent()
-            //    .ClickBuyButton()
-            //    .ClickRemoveButton()
-            //    .ClickHome()
-            //    .AssertBuyButtonIsNotPresent();
+            homePage
+                .ClickAddToCart()
+                .AssertBuyButtonIsPresent()
+                .ClickBuyButton()
+                .ClickRemoveButton()
+                .ClickHome()
+                .AssertBuyButtonIsNotPresent();
         }
     }
 }

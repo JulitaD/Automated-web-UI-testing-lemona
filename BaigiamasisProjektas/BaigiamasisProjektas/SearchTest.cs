@@ -11,7 +11,7 @@ namespace BaigiamasisProjektas
         public void TestSearch()
         {
             var searchText = "Jungtis";
-            loginPage
+            homePage
                 .EnterSearch(searchText)
                 .ClickSearch()
                 .AssertSearch(searchText);

@@ -11,8 +11,8 @@ namespace BaigiamasisProjektas
     public class BaseTest
     {
         public IWebDriver driver;
-        protected LoginPage loginPage;
         protected HomePage homePage;
+        protected UserPage userPage;
 
         [SetUp]
         public void InitDriver()
@@ -25,7 +25,7 @@ namespace BaigiamasisProjektas
         }
         private void InitPages()
         {
-            loginPage = new LoginPage(driver);
+            homePage = new HomePage(driver);
         }
 
         [TearDown]
