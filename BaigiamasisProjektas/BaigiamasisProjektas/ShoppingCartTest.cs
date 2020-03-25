@@ -10,13 +10,13 @@ namespace BaigiamasisProjektas
         [Test]
         public void TestShoppingCart()
         {
+            var itemText = "Akumuliatorius";
             homePage
+                .AssertItemTittle(itemText)
                 .ClickAddToCart()
                 .AssertBuyButtonIsPresent()
                 .ClickBuyButton()
-                .ClickRemoveButton()
-                .ClickHome()
-                .AssertBuyButtonIsNotPresent();
+                .AssertCartItemTitle(itemText);
         }
     }
 }

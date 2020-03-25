@@ -20,7 +20,7 @@ namespace BaigiamasisProjektas
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Url = "https://www.lemona.lt/";
-
+            driver.FindElement(By.CssSelector(".cookieinfo-close")).Click(); //kad uzdarytu coockies
             InitPages();
         }
         private void InitPages()

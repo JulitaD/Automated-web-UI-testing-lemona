@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using NUnit.Framework;
 using OpenQA.Selenium;
 
 namespace BaigiamasisProjektas.Pages
@@ -10,17 +11,11 @@ namespace BaigiamasisProjektas.Pages
         public CartPage(IWebDriver driver) : base(driver)
         {
         }
-        private IWebElement RemoveItemButton => Driver.FindElement(By.Id("delete_b"));
-        private IWebElement HomeButton => Driver.FindElement(By.ClassName("checkout_header_logo"));
-        public CartPage ClickRemoveButton()
+        private IWebElement CartItemTitleElement => Driver.FindElement(By.CssSelector("td:nth-child(3) a"));
+
+        public void AssertCartItemTitle(string text)
         {
-            RemoveItemButton.Click();
-            return this;
-        }
-        public HomePage ClickHome()
-        {
-            HomeButton.Click();
-            return new HomePage(Driver);
+            Assert.IsTrue((CartItemTitleElement.Text).Contains(text));
         }
     }
 }

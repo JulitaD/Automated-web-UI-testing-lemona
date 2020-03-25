@@ -20,13 +20,9 @@ namespace BaigiamasisProjektas.Pages
         private IWebElement SearchButton => Driver.FindElement(By.CssSelector("input[value='Rasti'].button"));
         private IWebElement SearchResultsElement => Driver.FindElement(By.TagName("h1"));
         //shoppingCart
-
-        //private IWebElement AddToCartElement => Driver.FindElements(By.ClassName("monoid-rec-product-order"))[0];
-
-        private IList<IWebElement> AddToCartElementList => Driver.FindElements(By.ClassName("monoid-rec-product-order"));
-        //private IWebElement AddtoCartElement => AddToCartElementList[0];
-
-        private IWebElement BuyButton => Driver.FindElement(By.CssSelector(".green_button1.center"));
+        private IWebElement AddToCartElement => Driver.FindElement(By.ClassName("monoid-rec-product-order"));
+        private IWebElement AddToCartTitleElement => Driver.FindElement(By.ClassName("monoid-rec-product-title"));
+        private IWebElement BuyButton => Driver.FindElement(By.CssSelector("span.green_button1.center"));
 
     //login
     public HomePage EnterUsername(string username)
@@ -61,9 +57,14 @@ namespace BaigiamasisProjektas.Pages
             Assert.IsTrue((SearchResultsElement.Text).Contains(text));
         }
         //cart
+        public HomePage AssertItemTittle(string text)
+        {
+            Assert.IsTrue((AddToCartTitleElement.Text).Contains(text));
+            return this;
+        }
         public HomePage ClickAddToCart()
         {
-            AddToCartElementList[0].Click();
+            AddToCartElement.Click();
             return this;
         }
         public HomePage AssertBuyButtonIsPresent()
@@ -76,9 +77,6 @@ namespace BaigiamasisProjektas.Pages
             BuyButton.Click();
             return new CartPage(Driver);
         }
-        public void AssertBuyButtonIsNotPresent()
-        {
-            Assert.IsNull(BuyButton);
-        }
+ 
     }
 }
