@@ -16,5 +16,7 @@ namespace BaigiamasisProjektas
                 .ClickSearch()
                 .AssertSearch(searchText);
         }
+
+        //teardown driver.url = "homepage"
     }
 }

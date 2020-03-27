@@ -15,7 +15,7 @@ namespace BaigiamasisProjektas
                 .EnterPassword(User.DeafaultUser.Password)
                 .ClickLogin()
                 .AssertLogoutIsVisible()
-                .ClickLogout();
+                .ClickLogout();  // turetu buti tear down
         }
         //[TearDown]
         //public void Logout()

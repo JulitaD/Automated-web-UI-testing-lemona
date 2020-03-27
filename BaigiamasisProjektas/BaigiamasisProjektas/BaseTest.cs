@@ -26,7 +26,7 @@ namespace BaigiamasisProjektas
         }
         private void InitPages()
         {
-            homePage = new HomePage(driver);
+            homePage = new HomePage(driver); // inicijuoti likusius page
         }
 
         [TearDown]

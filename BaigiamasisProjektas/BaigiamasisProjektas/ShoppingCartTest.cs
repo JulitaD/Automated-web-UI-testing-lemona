@@ -18,5 +18,7 @@ namespace BaigiamasisProjektas
                 .ClickBuyButton()
                 .AssertCartItemTitle(itemText);
         }
+
+        // labai gerai butu teardown isvalytu krepseli
     }
 }
