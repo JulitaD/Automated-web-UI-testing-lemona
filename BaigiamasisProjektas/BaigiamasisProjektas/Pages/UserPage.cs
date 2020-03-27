@@ -16,7 +16,6 @@ namespace BaigiamasisProjektas.Pages
         
         public UserPage AssertLogoutIsVisible()
         {
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             Assert.IsNotNull(LogoutElement);
             return this;
         }

@@ -20,7 +20,7 @@ namespace BaigiamasisProjektas
         //[TearDown]
         //public void Logout()
         //{
-        //    homePage.ClickLogout();
+        //    userPage.ClickLogout();
         //}
 
     }

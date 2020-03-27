@@ -10,7 +10,7 @@ namespace BaigiamasisProjektas
         [Test]
         public void TestSearch()
         {
-            var searchText = "Jungtis";
+            var searchText = "12V";
             homePage
                 .EnterSearch(searchText)
                 .ClickSearch()

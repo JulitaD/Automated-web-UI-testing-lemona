@@ -12,13 +12,14 @@ namespace BaigiamasisProjektas.Pages
         {
         }
         //login
-        private IWebElement UsernameElement => Driver.FindElement(By.CssSelector("input[name='user'].text_field"));
+        private IWebElement UsernameElement => Driver.FindElement(By.Name("user"));
         private IWebElement PasswordElement => Driver.FindElement(By.Id("password"));
         private IWebElement LoginButton => Driver.FindElement(By.CssSelector("span.green_button_basket1"));
         //search
         private IWebElement SearchElement => Driver.FindElement(By.Id("mc_search_field"));
         private IWebElement SearchButton => Driver.FindElement(By.CssSelector("input[value='Rasti'].button"));
-        private IWebElement SearchResultsElement => Driver.FindElement(By.TagName("h1"));
+        IList<IWebElement> SearchResultsElementList => Driver.FindElements(By.ClassName("td_name"));
+        
         //shoppingCart
         private IWebElement AddToCartElement => Driver.FindElement(By.ClassName("monoid-rec-product-order"));
         private IWebElement AddToCartTitleElement => Driver.FindElement(By.ClassName("monoid-rec-product-title"));
@@ -53,8 +54,10 @@ namespace BaigiamasisProjektas.Pages
         }
         public void AssertSearch(string text)
         {
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-            Assert.IsTrue((SearchResultsElement.Text).Contains(text));
+            foreach (var SearchResultsElement in SearchResultsElementList)
+            {
+                Assert.IsTrue((SearchResultsElement.Text).Contains(text));
+            }
         }
         //cart
         public HomePage AssertItemTittle(string text)
